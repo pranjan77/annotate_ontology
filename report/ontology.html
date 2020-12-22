@@ -1,0 +1,523 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/6.2.2/handsontable.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/6.2.2/handsontable.full.min.css">
+</head>
+
+<body>
+  <button class="btn">Add row above</button>
+
+  <div id="example3" class="hot handsontable htColumnHeaders"></div>
+  <script>
+
+
+var
+container3 = document.getElementById('example3'),
+           hot3;
+
+hot3 = new Handsontable(container3, {
+  manualColumnResize: true,
+  manualRowResize: true,
+  outsideClickDeselects: false,
+  startRows: 10,
+  rowHeaders: true,
+  colHeaders: true,
+  columnSorting: true,
+  colWidths: 150,
+  fillHandle: true,
+  columns: [
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+  {
+    type: 'autocomplete',
+    source: function (query, process) {
+      $.ajax({
+        url: 'https://www.ebi.ac.uk/ols/api/select',
+        dataType: 'json',
+        data: {
+          q: query
+        },
+        success: function (response) {
+          var arr= new Array();
+
+          $.each(response.response.docs, function(index,value) {
+            arr.push( value.label + " | " + value.iri )
+          });
+          console.log(arr.length)
+            console.log(arr)
+            process(arr);
+
+        }
+      });
+    },
+    strict: false
+  },
+
+
+
+  {}, // Year is a default text column
+  {}, // Chassis color is a default text column
+  {} // Bumper color is a default text column
+  ],
+
+});
+
+document.querySelector('.btn').addEventListener('click', function(){
+  hot3.alter('insert_row', hot3.getSelectedLast()[0], 1);
+})
+
+
+
+  </script>
+
+</body>
+</html>
